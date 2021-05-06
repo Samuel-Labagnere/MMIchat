@@ -1,0 +1,6 @@
+<h1>MMIchat</h1>
+
+<%= form_for @message, url: messages_path(@message) do |f| %>
+    <%= f.text_area :content, placeholder: "Votre message..." %><br />
+    <%= f.submit %>
+<% end %>
