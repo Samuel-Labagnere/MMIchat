@@ -1,5 +1,9 @@
 <h1>MMIchat</h1>
 
+<% Message.all.each do |m| %>
+    <p><span style="font-weight: bold;"><%= m.user.email %></span><br /><%= m.content %></p>
+<% end %>
+
 <%= form_for @message, url: messages_path(@message) do |f| %>
     <%= f.text_area :content, placeholder: "Votre message..." %><br />
     <%= f.submit %>
