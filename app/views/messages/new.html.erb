@@ -3,6 +3,7 @@
 <%= form_for @message do |f| %>
     <%= f.select :user_id, User.pluck(:email) %>
     <%= f.text_area :content, placeholder: "Votre message..." %>
+    <%= f.submit %>
 <% end %>
 
 <%= link_to 'Back', messages_path %>

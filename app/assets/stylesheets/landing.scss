@@ -1,3 +1,39 @@
 // Place all the styles related to the Landing controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+h1, h3{
+    text-align: center;
+}
+p{
+    font-size: 16px;
+}
+fieldset{
+    margin-left: auto;
+    margin-right: auto;
+}
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}
+.underline{
+    text-decoration: underline;
+}
+.user{
+    font-size: 18px;
+}
+.message{
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    max-width: 25vw;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+}
+.chatbox{
+    max-height: 75vh;
+    overflow-y: scroll;
+}
