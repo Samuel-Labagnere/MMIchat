@@ -19,8 +19,13 @@
 
     <%= simple_form_for @message, url: messages_path(@message) do |f| %>
         <div class="form-inputs">
+            <%=
+                f.label :content,
+                'Message:'
+            %>
             <%= 
                 f.input :content,
+                label: false,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "test" }
