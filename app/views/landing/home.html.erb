@@ -5,7 +5,7 @@
     <div class="button"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
 <% else %>
         <div class="button" style="margin-bottom: 10px;"><%= link_to 'Sign up',  new_user_session_path %></div>
-        <div class="button"><%= link_to 'Sign in', user_session_path %></div>
+        <div class="button" style="margin-bottom: 10px;"><%= link_to 'Sign in', user_session_path %></div>
 <% end %>
 
 <div class="chatbox">
