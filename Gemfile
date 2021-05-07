@@ -24,6 +24,7 @@ gem 'redis', '~> 4.0'
 
 gem 'devise'
 gem 'devise-i18n'
+gem 'rexml'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
