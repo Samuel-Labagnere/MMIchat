@@ -10,7 +10,7 @@
 
 <div class="chatbox">
     <% Message.all.reverse_each do |m| %>
-        <p class="message"><span class="user bold"><%= m.user.email %></span> (<%= m.created_at.to_formatted_s(:short) %>)<br /><%= m.content %></p>
+        <p class="message"><span class="user bold"><%= m.user.email %></span> <br />(<%= m.created_at.to_formatted_s(:short) %>)<br /><%= m.content %></p>
     <% end %>
 </div>
 
