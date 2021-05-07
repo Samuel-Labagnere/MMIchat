@@ -8,6 +8,27 @@ h1, h3{
 p{
     font-size: 16px;
 }
+.button{
+    border: 1px solid gray;
+    border-radius: 50px;
+    background-color: transparent;
+    font-weight: bold;
+    color: #F2F2EF;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        background-color: black;    
+    }
+}
 fieldset{
     margin-left: auto;
     margin-right: auto;
@@ -20,6 +41,15 @@ fieldset{
 }
 .underline{
     text-decoration: underline;
+}
+.center{
+    text-align: center;
+}
+.red{
+    color: red;
+}
+.flex{
+    display: flex;
 }
 .user{
     font-size: 18px;

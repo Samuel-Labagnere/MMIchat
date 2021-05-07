@@ -1,5 +1,12 @@
 <h1>MMIchat</h1>
 <h3>Chat de discussion pour la promo MMI</h3>
+<% if user_signed_in? %>
+    <p class="center">Bienvenue, <span class="bold"><%= current_user.email %></span>.</p>
+    <div class="button"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
+<% else %>
+        <div class="button"><%= link_to 'Sign up',  new_user_session_path %></div>
+        <div class="button"><%= link_to 'Sign in', user_session_path %></div>
+<% end %>
 
 <div class="chatbox">
     <% Message.all.reverse_each do |m| %>
@@ -7,10 +14,14 @@
     <% end %>
 </div>
 
-<%= form_for @message, url: messages_path(@message) do |f| %>
-    <fieldset style="width: 7vw;">
-    <legend>Envoyer un message</legend>
-        <%= f.text_area :content, placeholder: "Votre message..." %><br />
-        <%= f.submit "Envoyer" %>
-    </fieldset>
+<% if user_signed_in? %>
+    <%= form_for @message, url: messages_path(@message) do |f| %>
+        <fieldset style="width: 7vw;">
+        <legend>Envoyer un message</legend>
+            <%= f.text_area :content, placeholder: "Votre message..." %><br />
+            <%= f.submit "Envoyer" %>
+        </fieldset>
+    <% end %>
+<% else %>
+    <p class="center red">Veuillez vous connecter pour pouvoir discuter.</p>
 <% end %>
